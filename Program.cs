@@ -1,13 +1,25 @@
 ﻿using System;
+using ToDoIT.Model;
+
 
 namespace ToDoIT
 {
+}
 
-    class Program
+
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        Todo todo = new Todo();
+        Person person = new Person();
+
+        todo.Description = "";
+        todo.Done =
+        person.firstName =
+        person.lastName = 
+
+
     }
 }
+
