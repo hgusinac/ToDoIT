@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using PersonClass.Model;
+using System;
+
 
 namespace ToDoIT
 {
@@ -7,7 +10,19 @@ namespace ToDoIT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+
+            int personID = 1;
+            string firstName = "Pontus";
+            string lastName = "Sinklair";
+           
+            string firstName2 = string.Empty;
+
+            Person person = new Person(personID, firstName, lastName);
+
+            Console.WriteLine(person.FirstName);
+            Console.WriteLine(person.LastName);
+            Console.WriteLine(person.PersonID);
         }
     }
 }

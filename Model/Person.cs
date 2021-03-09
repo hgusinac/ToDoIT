@@ -2,27 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToDoIT.Model
+namespace PersonClass.Model
 {
-
     public class Person//Fields
     {
-        private readonly int personId;
+        private readonly int personID;
         private string firstName;
         private string lastName;
 
 
-        public Person(int personId)//construktor med en input parameter
+        public Person(int personID)// Constructor med en input parameter
         {
-            this.personId = personId;
+            this.personID = personID;
         }
-        public Person(string firstName, string lastName)//Constructor
+
+        public Person(int personID, string firstName, string lastName) : this(personID)//Constructor
         {
+           
             this.firstName = firstName;
             this.lastName = lastName;
         }
 
-        public string FirstName//Proporties
+        public int PersonID
+        {
+            get { return personID; }
+        }
+        public string FirstName//Properties
         {
             get { return firstName; }
 
@@ -34,7 +39,7 @@ namespace ToDoIT.Model
                 }
             }
         }
-        public string LastName//Proporties
+        public string LastName//Properties
         {
             get { return lastName; }
             set
@@ -44,10 +49,6 @@ namespace ToDoIT.Model
                     lastName = value;
                 }
             }
-        }
-        public int PersonId
-        {
-            get { return personId; }
         }
 
     }
