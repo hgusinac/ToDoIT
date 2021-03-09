@@ -1,40 +1,53 @@
 ﻿namespace ToDoIT.Model
 {
-    public class Person
-    {
-       private readonly int personId;
-       public string firstName;
-       public string lastName;
-  
-        public Person(string firstName)
-        {
-            this.FirstName = firstName;
 
-        }
-        public Person()
+    public class Person//Fields
+    {
+        private readonly int personId;
+        private string firstName;
+        private string lastName;
+
+
+        public Person(int personId)//construktor med en input parameter
         {
-            this.personId = PersonId;
-            this.firstName = FirstName;
-            this.lastName = LastName;
+            this.personId =personId;
         }
-        public string FirstName 
+        public Person(string firstName, string lastName)//Constructor
         {
-            get{ return firstName; }
-            set { firstName = value; }
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
-        public string LastName 
+
+        public string FirstName//Proporties
+        {
+            get { return firstName; }
+
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    firstName = value;
+                }
+            }
+        }
+        public string LastName//Proporties
         {
             get { return lastName; }
-            set { lastName = value; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    lastName = value;
+                }
+            }
         }
-        private  int PersonId
+        public int PersonId
         {
-            get { return personId;}
-            
+            get { return personId; }
         }
-
+        
     }
-    }
+}
 
 
 
