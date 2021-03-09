@@ -13,18 +13,18 @@ namespace ToDoIT.Model
         private bool done;
         private Person assignee;
 
-        public Todo(int todoid)//constructor
+      public Todo(int todoId)//constructor
         {
-            this.todoId = todoid;
+            this.todoId = todoId;
         }
-        public Todo( string description, bool done, Person assignee)//Constructor
+        public Todo(int todoId, string description)
+            :this(todoId)//Constructor
         {
-           
             this.description = description;
-            this.done = done;
-            this.assignee = assignee;
+            this.done = false;
         }
-        public int Todoid
+
+        public int TodoId
         {
             get
             {
@@ -41,6 +41,11 @@ namespace ToDoIT.Model
                 {
                     description = value;
                 }
+                else
+                {
+                    
+                }
+               
             }
         }
         

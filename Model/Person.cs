@@ -12,10 +12,16 @@
         {
             this.personId =personId;
         }
-        public Person(string firstName, string lastName)//Constructor
+        public Person(int personId,string firstName, string lastName) 
+            : this(personId)//Constructor
+
         {
             this.firstName = firstName;
             this.lastName = lastName;
+        }
+        public int PersonId
+        {
+            get { return personId; }
         }
 
         public string FirstName//Proporties
@@ -41,10 +47,7 @@
                 }
             }
         }
-        public int PersonId
-        {
-            get { return personId; }
-        }
+   
         
     }
 }
